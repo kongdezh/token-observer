@@ -1,0 +1,52 @@
+<div id="token-observer-settings" class="token-observer-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Token Observer · Token 消耗与缓存命中</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <label class="checkbox_label">
+                <input type="checkbox" id="to_enabled">
+                <span>启用统计</span>
+            </label>
+            <label class="checkbox_label">
+                <input type="checkbox" id="to_show_widget">
+                <span>显示悬浮统计（对话区右下角）</span>
+            </label>
+            <label class="checkbox_label">
+                <input type="checkbox" id="to_show_cost">
+                <span>显示估算费用</span>
+            </label>
+            <label class="checkbox_label">
+                <input type="checkbox" id="to_auto_reset">
+                <span>切换聊天时自动重置</span>
+            </label>
+
+            <hr>
+            <div class="to-prices">
+                <div class="to-price-row">
+                    <span>命中缓存单价（元 / 百万）</span>
+                    <input type="number" id="to_price_hit" min="0" step="0.01" class="text_pole to-price-input">
+                </div>
+                <div class="to-price-row">
+                    <span>未命中缓存单价（元 / 百万）</span>
+                    <input type="number" id="to_price_miss" min="0" step="0.01" class="text_pole to-price-input">
+                </div>
+                <div class="to-price-row">
+                    <span>输出单价（元 / 百万）</span>
+                    <input type="number" id="to_price_out" min="0" step="0.01" class="text_pole to-price-input">
+                </div>
+            </div>
+            <small class="to-note">默认单价仅作占位，请按你所使用模型的官方最新价格修改。<br>
+                DeepSeek 流式会自动返回 usage（含缓存命中/未命中），开箱即用。OpenAI 等接口若流式拿不到数据，可在「API 连接 → 自定义请求体(custom_include_body)」填入 {"stream_options":{"include_usage":true}}；或使用非流式模式。</small>
+
+            <hr>
+            <pre id="to_summary" class="to-summary">暂无数据</pre>
+
+            <div class="to-buttons">
+                <div id="to_details" class="menu_button"><i class="fa-solid fa-table-list"></i> 查看明细</div>
+                <div id="to_reset" class="menu_button"><i class="fa-solid fa-rotate-left"></i> 重置统计</div>
+            </div>
+        </div>
+    </div>
+</div>

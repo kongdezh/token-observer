@@ -1,0 +1,11 @@
+{
+    "display_name": "Token Observer (缓存命中统计)",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "you",
+    "version": "1.0.0",
+    "homePage": ""
+}

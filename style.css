@@ -1,0 +1,150 @@
+/* Token Observer */
+
+.token-observer-widget {
+    position: absolute;
+    right: 14px;
+    bottom: 48px;
+    z-index: 3006;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.2;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    max-width: calc(100% - 28px);
+    overflow: hidden;
+    background-color: var(--SmartThemeBlurTintColor, rgba(0, 0, 0, 0.35));
+    backdrop-filter: blur(var(--SmartThemeBlurStrength, 6px));
+    -webkit-backdrop-filter: blur(var(--SmartThemeBlurStrength, 6px));
+    border: 1px solid var(--SmartThemeBorderColor, rgba(255, 255, 255, 0.15));
+    opacity: 0.55;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.token-observer-widget:hover {
+    opacity: 1;
+}
+
+.token-observer-widget.token-observer-inline {
+    position: static;
+    justify-content: flex-end;
+    margin: 4px 8px;
+}
+
+.token-observer-widget .to-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background-color: var(--black50a, rgba(0, 0, 0, 0.15));
+    color: var(--SmartThemeBodyColor, inherit);
+}
+
+.token-observer-widget .to-chip i {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.token-observer-widget .to-chip.to-good {
+    color: #4caf50;
+}
+
+.token-observer-widget .to-chip.to-mid {
+    color: #ff9800;
+}
+
+.token-observer-widget .to-chip.to-bad {
+    color: #f44336;
+}
+
+.token-observer-widget .to-chip.to-idle {
+    opacity: 0.7;
+}
+
+/* 设置面板 */
+
+.token-observer-settings .to-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.token-observer-settings .to-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.token-observer-settings .to-price-input {
+    width: 90px;
+    flex: 0 0 auto;
+}
+
+.token-observer-settings .to-note {
+    display: block;
+    margin-top: 6px;
+    opacity: 0.7;
+}
+
+.token-observer-settings .to-summary {
+    margin: 8px 0;
+    padding: 8px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 12px;
+    line-height: 1.6;
+    background-color: var(--black50a, rgba(0, 0, 0, 0.15));
+    border-radius: 6px;
+    font-family: var(--monoFontFamily, monospace);
+}
+
+.token-observer-settings .to-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.token-observer-settings .to-buttons .menu_button {
+    white-space: nowrap;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+/* 明细弹窗 */
+
+.token-observer-popup .to-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+}
+
+.token-observer-popup .to-table .to-k {
+    text-align: left;
+    padding: 4px 8px;
+    opacity: 0.8;
+}
+
+.token-observer-popup .to-table .to-v {
+    text-align: right;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-family: var(--monoFontFamily, monospace);
+}
+
+.token-observer-popup .to-hint {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+.token-observer-popup .to-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
